@@ -42,6 +42,7 @@
       <li>17일</li>
       <li>22일</li>
       <li>24일</li>
+      <li>28일</li>
     </ul>
   <li><a href="5월.html" title="May">5월</a></li>
   </ol>
@@ -86,6 +87,15 @@ CSS를 사용하는 방법에는 <strong style="color:red; text-decoration:under
 그러고 나서 그 뒤에 coler:black과 같은 효과를 지정해 준다. 지정한 태그들에게 어떤 효과를 줄지에 대한 것을 <strong style="color:green">declaration</strong>이라고 한다. declaration은 속성(property)과 속성값(value)으로 구분되는데, <strong style="color:green">속성</strong>은 어떤 효과(색깔, 크기, 장식 등)를 줄지 선택하는 것이고, <strong style="color:green">속성값</strong>은 속성이 색깔이라면 red, yellow, 크기라면 60px, larger 즉, 속성에 대한 구체적 값을 의미한다. 여러 효과를 줄 때에는 각 declaration 뒤에 ;을 붙여서 구분한다.<br>
 오늘 배운 것들로 글씨 정렬도 하고, 크기도 조절하고, 색깔도 바꾸고 그림자도 주니 재미있었다! 인터넷에 찾아보니 정말로 아주 다양한 종류의 속성들이 있던데, 다음 시간에 선택자에 대한 것도 배워서 그 속성들을 다 이용할 수 있다면 웹페이지를 좀더 예쁘게 꾸밀 수 있을 것 같다. 이걸 진짜 깊게 파면 <a href="https://www.dbcut.com/bbs/index.php" title="디비컷" target="_blank">이런 웹사이트</a>들도 만들 수 있을라나.</p>  
 
+<h3>4/28</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lkJmaV8LkSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>CSS 선택자에 대해 배웠는데, 저번보다 개념이 복잡하게 느껴졌다. 선택자에는 등급이 있다. 24일에 배웠던 것과 같은 <u style="color:red">일반 태그</u>(a나 h4 같은 것), <u style="color:red">클래스(class)</u>, <u style="color:red">id</u> 이렇게 3종류가 있는데 컴퓨터가 이 선택자들을 구분하는 우선순위는 일반태그<클래스<아이디 이렇게다. 그래서 일반 태그가 가장 포괄적이고 갈수록 구체화되는데, 이렇게 만든 이유는 <strong style="text-shadow:1px 1px 1px yellow; color:green">일반 태그를 이용해 우선 큰 틀에서 웹페이지를 디자인하고, 그 다음에 우선순위에 따라 클래스나 아이디를 사용해서 보다 구체적으로 웹페이지를 디자인하는 방법이 가장 효율적이기 때문</strong>이란다. <br>
+그래서 나는 이걸 보고 포토샵의 레이어를 떠올렸는데, 겹겹이 디자인을 쌓는 개념이 선택자와 레이어가 비슷한 측면이 있다고 느꼈기 때문이다. 물론 레이어에는 등급이 나뉘지 않고, 그저 가장 마지막에 있는 레이어가 우선순위로 적용될 뿐이지만 말이다. 사실 이건 CSS에서도 동일한 측면이 있다. 같은 선택자 그룹 내에서는 가장 최근에 있는, 그러니까 가장 마지막에 쓰인 선택자의 효과가 적용되기 때문이다. 이를테면 클래스의 값이 여러 개가 있다면, 가장 밑에 쓰인 코드의 효과가 적용되어 나타난다. <br>
+태그를 이용하여 CSS를 적용하는 방법은 위에도 썼듯, a{}, h3{}, li{} 등을 쓰면 된다. 클래스를 이용하려면 우선 그룹을 지을 태그들에게 </strong style="color:blue">class="그룹명"</strong>이라는 html 속성을 부여해 줘야 한다. 그 다음에 [style] 태그를 지정해둔 곳에 가서 <strong style="color:blue">.그룹명{}</strong>을 쓰고 {} 안에다 적용하고 싶은 효과를 적어주면 된다. 여기서 '.'을 붙이지 않으면 컴퓨터는 이 웹페이지에 있는 모든 '그룹명'이라는 이름의 태그를 선택하는 선택자로 생각해서 아무 변화도 일어나지 않는다. 모든 이름이 아니라 클래스 값이 '그룹명'인 태그를 선택해야 하므로 그걸 컴퓨터에게 알려주기 위한 약속된 기호가 바로 '.'인 것이다. '.'을 앞에 붙이는 순간 컴퓨터는 "클래스 값이 '그룹명'"인 태그를 선택자로 인식할 수 있게 되는 것이다. id 역시 마찬가지다. id는 가장 상위에 속하는 선택자다. 그러니까 코드를 작성한 순서에 상관없이 가장 우선순위를 차지하는 선택자인 것이다. 이때 클래스는 여러 값을 가질 수 있으며 이는 띄어쓰기로 구분한다. 예를 들어 class="visited" "active" 이렇게 하나의 태그는 여러 개의 클래스 속성을 가질 수 있다.<br>
+클래스처럼 마찬가지로 우선 id를 부여하고 싶은 곳에 <strong style="color:blue">id=""</strong>라는 html 속성을 넣어준다. 다음에 style 태그를 달아둔 곳에서 <strong style="color:blue">#"id명"{}</strong> 안에 효과를 넣어주면 된다. 여기서 #는 클래스의 '.'과 같은 역할을 한다. id와 클래스의 다른 점은 id는 identity를 의미하는 만큼 한 웹 페이지에 같은 id값을 가질 수는 없다는 점이다.이때 id명이나 클래스 그룹명은 본인이 짓기 나름인데, 이걸 다른 사람들도 잘 알아볼 수 있도록 태그와 관련된 이름을 짓는 것이 좋다고 한다.<br>
+&#128153;아 이건 별개 얘기지만 오늘 동큘 티켓팅 성공했다!!ㅠㅠㅠㅜ 전동석x조정은 페어로 보고싶어서 5월 20일 아니면 6월 5일이 목표였는데 6월 5일은 주말이라 티켓값이 비싸져서 5월 20일이 1순위였는데 다행히 성공했다ㅠㅜ 이것만 생각하면 난 행복해져...ㅜㅜ 지금은 백수니까 R석이지만 나중에 취업하면 vip석으로 다회전돌거야ㅠㅠ 하지만 오늘은 운 좋게 R석인데도 꽤 앞자리에 잡았다! 진짜 남은 날 5월 20일 동큘 실물로 영접할 날만 기다리면서 살아간다..&#128525;
+</p>  
+  
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
